@@ -1883,3 +1883,170 @@ textarea,
     max-height: 230px !important;
   }
 }
+
+/* ==========================================
+   CORRECCIÓN DE TODAS LAS FOTOGRAFÍAS
+   ========================================== */
+
+/* CONTENEDOR GENERAL DE FOTOGRAFÍAS */
+
+.portrait {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 220px;
+  height: 240px;
+  max-width: 100%;
+
+  margin: 18px auto 24px;
+  padding: 0 !important;
+
+  background: transparent !important;
+  background-image: url("imagenes/pergamino.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  overflow: hidden !important;
+  isolation: isolate;
+}
+
+/* ELIMINAR CAPAS VIEJAS */
+
+.portrait::before,
+.portrait::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* IMÁGENES DE PERSONAJES Y SILUETAS */
+
+.portrait img,
+.portrait.real img,
+.game-photo .portrait img,
+.game-photo .portrait.real img {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  background: transparent !important;
+
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  z-index: 1 !important;
+}
+
+/* EVITAR EL SIGNO DE PREGUNTA DUPLICADO */
+
+.portrait:has(img) .question {
+  display: none !important;
+}
+
+/* SI LA IMAGEN NO EXISTE,
+   MOSTRAR UN SIGNO DE PREGUNTA */
+
+.portrait:not(:has(img)) .question {
+  display: block !important;
+  position: relative !important;
+  z-index: 2 !important;
+  color: #674021 !important;
+  font-size: 90px !important;
+  text-shadow: none !important;
+}
+
+/* ==========================================
+   FOTOGRAFÍA EN PANTALLA DE JUEGO
+   ========================================== */
+
+.game-photo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0;
+}
+
+.game-photo .portrait,
+.game-photo .portrait.real {
+  width: 100% !important;
+  height: 354px !important;
+  min-height: 354px !important;
+  max-height: 354px !important;
+
+  margin: 0 !important;
+}
+
+/* ==========================================
+   FOTOGRAFÍA EN PANTALLA DE INICIO
+   ========================================== */
+
+.panel.center .portrait {
+  width: 220px !important;
+  height: 240px !important;
+  min-height: 240px !important;
+  max-height: 240px !important;
+
+  margin: 18px auto 24px !important;
+}
+
+/* ==========================================
+   FOTOGRAFÍA EN FICHA FINAL
+   ========================================== */
+
+.panel.center .portrait.real {
+  width: 260px !important;
+  height: 290px !important;
+  min-height: 290px !important;
+  max-height: 290px !important;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 760px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    width: 210px !important;
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
+
+  .panel.center .portrait {
+    width: 190px !important;
+    height: 210px !important;
+    min-height: 210px !important;
+    max-height: 210px !important;
+  }
+}
