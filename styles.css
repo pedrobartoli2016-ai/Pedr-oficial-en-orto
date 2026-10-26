@@ -1,0 +1,1885 @@
+
+:root {
+  color-scheme: dark;
+  --bg: #0b1120;
+  --surface: #131d30;
+  --surface2: #1b2940;
+  --line: #2c3c55;
+  --text: #f3f6fb;
+  --muted: #9fb0c7;
+  --gold: #f2c779;
+  --green: #8fe3b2;
+  --red: #ff9e9e;
+  --ink: #3a2617;
+  --paper: #e8cda0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% -20%, #243550 0%, var(--bg) 52%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 2px 0;
+}
+
+.accent {
+  color: var(--gold);
+}
+
+.topright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.subtle-button {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(19, 29, 48, .95);
+  padding: clamp(20px, 5vw, 34px);
+  box-shadow: 0 20px 55px #0002;
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.kicker {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.big {
+  font-size: clamp(28px, 5vw, 40px);
+  margin: 12px 0;
+}
+
+/* BOTONES GENERALES */
+
+.button {
+  appearance: none;
+  background: var(--gold);
+  color: #172032;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 13px 19px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.button:hover {
+  filter: brightness(1.06);
+}
+
+.button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.button.secondary {
+  background: var(--surface2);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.button.danger {
+  background: transparent;
+  color: var(--red);
+  border-color: #8b4b55;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* PROGRESO */
+
+.progress {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.progress span {
+  height: 5px;
+  flex: 1;
+  border-radius: 10px;
+  background: var(--line);
+}
+
+.progress span.active {
+  background: var(--gold);
+}
+
+.progress span.done {
+  background: var(--green);
+}
+
+.scorebar {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 13px;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.scorebar strong {
+  color: var(--text);
+}
+
+/* FOTOGRAFÍA */
+
+.portrait {
+  height: 200px;
+  width: 185px;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #273954, #111b2c);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 12px auto 24px;
+  position: relative;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.portrait .question {
+  font-size: 92px;
+  color: #51617b;
+}
+
+.portrait.real {
+  background: #253044;
+}
+
+.portrait.real img {
+  object-fit: contain;
+}
+
+/* PISTAS */
+
+.clues {
+  display: grid;
+  gap: 10px;
+}
+
+.clue {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface2);
+  padding: 13px 15px;
+  border-radius: 11px;
+  min-height: 64px;
+}
+
+.clue .num {
+  border-radius: 7px;
+  background: #34435c;
+  color: var(--gold);
+  min-width: 30px;
+  text-align: center;
+  padding: 6px;
+}
+
+.clue .type {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.clue .value {
+  margin-top: 3px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.clue.locked {
+  opacity: .46;
+}
+
+/* RESPUESTAS */
+
+.answer-area {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.searchbox {
+  position: relative;
+}
+
+.searchbox input {
+  width: 100%;
+  border: 1px solid #53657f;
+  background: #0c1627;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 14px 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchbox input:focus {
+  border-color: var(--gold);
+}
+
+.suggestions {
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 5px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  background: #24324a;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  max-height: 230px;
+  overflow: auto;
+  box-shadow: 0 16px 30px #0005;
+}
+
+.suggestions li button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.suggestions li button:hover,
+.suggestions li button:focus {
+  background: #3a4a62;
+}
+
+.selected {
+  color: var(--green);
+  font-size: 13px;
+  min-height: 22px;
+  margin-top: 8px;
+}
+
+.feedback {
+  margin: 14px 0 0;
+}
+
+.feedback.bad {
+  color: var(--red);
+}
+
+.feedback.good {
+  color: var(--green);
+}
+
+.history {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.history ul {
+  padding-left: 20px;
+}
+
+.history li {
+  margin: 5px 0;
+}
+
+.fact {
+  line-height: 1.75;
+  color: #d7e0ef;
+}
+
+/* ESTADÍSTICAS */
+
+.statsgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.stat {
+  padding: 16px;
+  background: var(--surface2);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 26px;
+  color: var(--gold);
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.recap-links {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.recap-links button {
+  width: 100%;
+  text-align: left;
+}
+
+.loading {
+  text-align: center;
+  color: var(--muted);
+  padding: 50px;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  color: #76869f;
+  margin-top: 12px;
+}
+
+dialog {
+  width: min(500px, calc(100vw - 24px));
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 24px;
+}
+
+dialog::backdrop {
+  background: #000a;
+}
+
+.dialog-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* DISTRIBUCIÓN HORIZONTAL */
+
+.game-panel {
+  padding: 18px 22px 14px;
+}
+
+.game-panel .progress {
+  margin: 0 0 10px;
+}
+
+.game-panel .scorebar {
+  margin: 0 0 12px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 40%) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.game-photo {
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.game-photo .portrait {
+  width: 100%;
+  height: auto;
+  min-height: 310px;
+  max-height: 390px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.game-photo .portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.game-photo .portrait .question {
+  position: absolute;
+  z-index: 0;
+}
+
+.game-clue-column {
+  min-width: 0;
+}
+
+.game-title {
+  margin-bottom: 8px;
+}
+
+.game-title h2 {
+  font-size: 23px;
+  line-height: 1.1;
+  margin: 3px 0 0;
+}
+
+.game-panel .clues {
+  gap: 6px;
+}
+
+.game-panel .clue {
+  min-height: 52px;
+  padding: 7px 10px;
+  gap: 9px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.game-panel .clue .num {
+  padding: 4px;
+  min-width: 25px;
+}
+
+.game-panel .clue .type {
+  font-size: 10px;
+}
+
+.game-panel .clue .value {
+  font-size: 14px;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+.game-panel .answer-area {
+  border: 0;
+  margin-top: 14px;
+  padding-top: 0;
+}
+
+.answer-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.answer-controls .searchbox {
+  min-width: 0;
+}
+
+.answer-controls .searchbox input {
+  height: 46px;
+  padding: 10px 12px;
+}
+
+.answer-controls .button {
+  padding: 10px 14px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.answer-controls .suggestions {
+  bottom: calc(100% + 5px);
+  top: auto;
+  max-height: 200px;
+  margin: 0;
+}
+
+.answer-status {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 20px;
+  margin-top: 6px;
+}
+
+.answer-status .selected {
+  margin: 0;
+  min-height: 0;
+  font-size: 12px;
+}
+
+.answer-status .feedback {
+  margin: 0;
+  font-size: 12px;
+}
+
+.dev-reset {
+  margin-top: 4px;
+  font-size: 11px;
+  padding: 6px 8px;
+  border: 1px dashed #66758c;
+  border-radius: 8px;
+  background: transparent;
+  color: #aab8cc;
+  cursor: pointer;
+}
+
+.dev-reset:hover {
+  color: white;
+  border-color: white;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================
+   NUEVO DISEÑO: PERGAMINO ANTIGUO
+   ========================================== */
+
+/* Textura para las cinco pistas */
+
+.game-panel .clue {
+  background-color: #e8cda0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(91, 47, 16, .16),
+      transparent 15%,
+      transparent 85%,
+      rgba(91, 47, 16, .18)
+    ),
+    url("imagenes/pergamino.png");
+  background-size: 100% 100%;
+  background-position: center;
+  border: 1px solid #80572e;
+  border-radius: 5px 12px 7px 10px;
+  box-shadow:
+    inset 0 0 15px rgba(82, 42, 13, .17),
+    2px 4px 8px rgba(0, 0, 0, .28);
+  color: var(--ink);
+  padding: 12px 22px;
+  min-height: 65px;
+}
+
+/* Número de pista */
+
+.game-panel .clue .num {
+  background: rgba(93, 53, 22, .88);
+  color: #f7e3bb;
+  border: 1px solid #593416;
+  border-radius: 4px;
+  min-width: 29px;
+  padding: 5px;
+}
+
+/* Título y texto de las pistas */
+
+.game-panel .clue .type {
+  color: #76502c;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-shadow: 0 1px 0 rgba(255, 245, 210, .4);
+}
+
+.game-panel .clue .value {
+  color: #302015;
+  font-size: 15px;
+  line-height: 1.35;
+  text-shadow: 0 1px 0 rgba(255, 245, 210, .35);
+}
+
+/* Pistas todavía bloqueadas */
+
+.game-panel .clue.locked {
+  opacity: .68;
+  filter: saturate(.7);
+}
+
+.game-panel .clue.locked .value {
+  color: #654b34;
+}
+
+/* Marco antiguo de la fotografía */
+
+.game-photo .portrait {
+  background:
+    linear-gradient(
+      rgba(232, 205, 160, .16),
+      rgba(94, 53, 24, .13)
+    ),
+    url("imagenes/pergamino.png") center / 100% 100%;
+  border: 9px solid #a8783d;
+  outline: 2px solid #51331b;
+  outline-offset: 2px;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 28px rgba(58, 29, 8, .6),
+    0 8px 20px rgba(0, 0, 0, .45);
+}
+
+.game-photo .portrait .question {
+  color: #634020;
+  text-shadow: 1px 2px 2px #fff6;
+}
+
+/* Mantener las imágenes completas */
+
+.game-photo .portrait img,
+.game-photo .portrait.real img,
+.portrait.real img {
+  object-fit: contain;
+}
+
+/* Buscador de nombres */
+
+.answer-controls .searchbox input {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(91, 47, 16, .12),
+      transparent 20%,
+      rgba(91, 47, 16, .1)
+    ),
+    url("imagenes/pergamino.png") center / 100% 100%;
+  color: #302015;
+  border: 2px solid #a8783d;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 12px rgba(90, 47, 16, .2),
+    0 3px 8px #0004;
+  font-family: inherit;
+}
+
+.answer-controls .searchbox input::placeholder {
+  color: #785635;
+  opacity: 1;
+}
+
+.answer-controls .searchbox input:focus {
+  border-color: #f2c779;
+  box-shadow: 0 0 0 2px rgba(242, 199, 121, .25);
+}
+
+/* Lista desplegable de nombres */
+
+.answer-controls .suggestions {
+  background: #e4c99b;
+  background-image: url("imagenes/pergamino.png");
+  background-size: 100% 100%;
+  border: 2px solid #80572e;
+  border-radius: 5px;
+  box-shadow: 0 12px 25px #0008;
+}
+
+.suggestions li button {
+  color: #382414;
+  font-family: inherit;
+}
+
+.suggestions li button:hover,
+.suggestions li button:focus {
+  background: rgba(104, 61, 25, .2);
+  color: #26180e;
+}
+
+/* Botones de responder, saltar y rendirse */
+
+.answer-controls .button {
+  background-color: #e5c899;
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(91, 47, 16, .18),
+      transparent 50%,
+      rgba(91, 47, 16, .15)
+    ),
+    url("imagenes/pergamino.png");
+  background-size: 100% 100%;
+  background-position: center;
+  color: #382414;
+  border: 2px solid #9a6938;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 10px rgba(74, 37, 12, .15),
+    0 4px 8px rgba(0, 0, 0, .3);
+  text-shadow: 0 1px 0 #fff6;
+  transition: transform .15s, filter .15s;
+}
+
+.answer-controls .button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
+.answer-controls .button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.answer-controls .button.secondary {
+  color: #5c391d;
+  border-color: #88613c;
+}
+
+.answer-controls .button.danger {
+  color: #872f24;
+  border-color: #9b5140;
+}
+
+.answer-controls .button:disabled {
+  opacity: .45;
+}
+
+/* Mensajes de respuesta */
+
+.answer-status .selected {
+  color: #f2c779;
+}
+
+.answer-status .feedback.bad {
+  color: #ffb4a8;
+}
+
+/* ==========================================
+   ADAPTACIÓN A PANTALLAS
+   ========================================== */
+
+@media (max-width: 760px) {
+  .shell {
+    padding: 14px 12px 28px;
+  }
+
+  .game-panel {
+    padding: 14px;
+  }
+
+  .game-grid {
+    grid-template-columns: minmax(120px, 40%) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .game-photo .portrait {
+    min-height: 260px;
+  }
+
+  .game-title h2 {
+    font-size: 19px;
+  }
+
+  .game-panel .clue {
+    padding: 9px 13px;
+    min-height: 54px;
+  }
+
+  .game-panel .clue .value {
+    font-size: 12px;
+  }
+
+  .answer-controls {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 6px;
+  }
+
+  .answer-controls #surrender {
+    grid-column: 3;
+  }
+
+  .answer-controls .button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-photo .portrait {
+    width: 180px;
+    height: 190px;
+    min-height: 190px;
+    margin: 0 auto;
+  }
+
+  .answer-controls {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .answer-controls .searchbox {
+    grid-column: 1 / -1;
+  }
+
+  .answer-controls #surrender {
+    grid-column: auto;
+  }
+
+  .game-title h2 {
+    font-size: 20px;
+  }
+
+  .topbar h1 {
+    font-size: 27px;
+  }
+
+  .game-panel .clue {
+    min-height: 60px;
+  }
+}
+
+@media (max-height: 730px) and (min-width: 761px) {
+  .game-photo .portrait {
+    min-height: 280px;
+    max-height: 335px;
+  }
+
+  .game-panel .clue {
+    min-height: 53px;
+    padding: 8px 14px;
+  }
+
+  .game-panel .clues {
+    gap: 5px;
+  }
+}
+
+/* ==========================================
+   MEJORAS VISUALES — PERGAMINO HISTÓRICO
+   ========================================== */
+
+/* TÍTULO ¿QUIÉN ES? MUCHO MÁS GRANDE */
+
+.game-title {
+  margin-bottom: 15px;
+}
+
+.game-title .kicker {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #d9ad62;
+}
+
+.game-title h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: 2px;
+  margin: 5px 0 12px;
+  color: #f2c779;
+  text-shadow:
+    2px 3px 0 #4b301b,
+    4px 5px 8px rgba(0, 0, 0, .6);
+}
+
+/* FOTOGRAFÍA CON FONDO DE PAPEL ANTIGUO */
+
+.game-photo .portrait {
+  position: relative;
+  background-color: #d8b783;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 240, 199, .3),
+      rgba(83, 45, 19, .2)
+    ),
+    url("imagenes/pergamino.png");
+  background-position: center;
+  background-size: 100% 100%;
+
+  border: 7px solid #94632f;
+  outline: 2px solid #4d3019;
+  outline-offset: 2px;
+
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 30px rgba(71, 34, 10, .4),
+    0 8px 20px rgba(0, 0, 0, .4);
+
+  overflow: hidden;
+}
+
+/* Oscurecimiento suave de los bordes interiores */
+
+.game-photo .portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 25px rgba(76, 38, 12, .4);
+}
+
+/* Mantener la silueta y los retratos completos */
+
+.game-photo .portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* PISTAS MÁS LIMPIAS Y LEGIBLES */
+
+.game-panel .clues {
+  gap: 9px;
+}
+
+.game-panel .clue {
+  min-height: 68px;
+  padding: 11px 20px;
+  gap: 13px;
+
+  background-color: #e9d1a7;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(82, 44, 18, .08),
+      transparent 22%,
+      transparent 78%,
+      rgba(82, 44, 18, .12)
+    ),
+    url("imagenes/pergamino.png");
+  background-size: 100% 100%;
+  background-position: center;
+
+  border: 1px solid #9d754b;
+  border-radius: 7px;
+
+  box-shadow:
+    inset 0 0 8px rgba(85, 45, 15, .12),
+    0 3px 7px rgba(0, 0, 0, .2);
+}
+
+.game-panel .clue .num {
+  min-width: 33px;
+  padding: 7px 5px;
+  font-size: 16px;
+  background: #694221;
+  color: #f9e5bd;
+  border-radius: 5px;
+}
+
+.game-panel .clue .type {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #74502e;
+}
+
+.game-panel .clue .value {
+  font-size: 17px;
+  line-height: 1.4;
+  color: #302015;
+  margin-top: 3px;
+}
+
+.game-panel .clue.locked {
+  opacity: .65;
+}
+
+/* BUSCADOR MÁS ALTO */
+
+.answer-controls {
+  gap: 12px;
+  align-items: stretch;
+}
+
+.answer-controls .searchbox input {
+  height: 55px;
+  font-size: 16px;
+  padding: 13px 17px;
+  border-radius: 7px;
+}
+
+/* BOTONES MÁS GRANDES */
+
+.answer-controls .button {
+  min-height: 55px;
+  padding: 13px 19px;
+  font-size: 16px;
+  border-radius: 7px;
+  white-space: nowrap;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: .3px;
+}
+
+.answer-controls .button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 10px rgba(74, 37, 12, .12),
+    0 6px 12px rgba(0, 0, 0, .4);
+}
+
+/* Más separación antes de las respuestas */
+
+.game-panel .answer-area {
+  margin-top: 22px;
+}
+
+/* AJUSTES PARA TABLETS */
+
+@media (max-width: 900px) {
+  .game-title h2 {
+    font-size: 48px;
+  }
+
+  .game-panel .clue {
+    min-height: 60px;
+    padding: 9px 13px;
+  }
+
+  .game-panel .clue .value {
+    font-size: 14px;
+  }
+
+  .answer-controls {
+    gap: 7px;
+  }
+
+  .answer-controls .button {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+/* AJUSTES PARA CELULARES */
+
+@media (max-width: 540px) {
+  .game-title {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .game-title h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+  }
+
+  .game-photo .portrait {
+    width: 210px;
+    height: 230px;
+    min-height: 230px;
+    margin: 0 auto;
+  }
+
+  .game-panel .clue {
+    min-height: 65px;
+    padding: 10px 14px;
+  }
+
+  .game-panel .clue .value {
+    font-size: 15px;
+  }
+
+  .answer-controls {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .answer-controls .searchbox {
+    grid-column: 1 / -1;
+  }
+
+  .answer-controls .button {
+    width: 100%;
+    min-height: 48px;
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  .answer-controls #surrender {
+    grid-column: auto;
+  }
+}
+
+/* ==========================================
+   ELIMINAR LOGO SUPERIOR Y SUBIR EL JUEGO
+   ========================================== */
+
+/* Ocultar el logo pequeño de arriba */
+
+.topbar .eyebrow,
+.topbar h1 {
+  display: none;
+}
+
+/* Reducir el espacio del encabezado */
+
+.topbar {
+  min-height: 0;
+  margin: 0 0 4px;
+  padding: 0;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* Mantener estadísticas a la derecha */
+
+.topright {
+  margin-left: auto;
+  gap: 5px;
+}
+
+/* Reducir el margen superior de la página */
+
+.shell {
+  padding-top: 4px;
+}
+
+/* Acercar el panel al encabezado */
+
+.game-panel {
+  margin-top: 0;
+}
+
+/* Reducir espacios innecesarios */
+
+.game-panel .progress {
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.game-panel .scorebar {
+  margin-bottom: 8px;
+}
+
+/* Ajustes en celulares */
+
+@media (max-width: 540px) {
+  .shell {
+    padding-top: 4px;
+  }
+
+  .topbar {
+    margin-bottom: 5px;
+  }
+
+  .topright {
+    gap: 4px;
+  }
+}
+
+/* ==========================================
+   ENCABEZADO FLOTANTE A LA DERECHA
+   Y JUEGO MÁS ARRIBA
+   ========================================== */
+
+/* Eliminar el espacio que ocupa el encabezado */
+
+.topbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 20;
+}
+
+/* Controles en la esquina superior derecha */
+
+.topright {
+  position: fixed;
+  top: 94px;
+  right: 22px;
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  z-index: 30;
+}
+
+/* Fecha */
+
+.topright #date-label {
+  font-size: 12px;
+  color: #f2c779;
+  text-align: right;
+}
+
+/* Botones del encabezado */
+
+.topright button {
+  width: auto;
+  max-width: 135px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Botón de reinicio */
+
+.topright .dev-reset {
+  font-size: 10px;
+  padding: 6px 8px;
+}
+
+/* Subir toda la página */
+
+.shell {
+  max-width: 1100px;
+  padding-top: 4px;
+}
+
+/* Panel principal */
+
+.panel.game-panel {
+  margin-top: 0;
+}
+
+/* Evitar espacio superior innecesario */
+
+.game-panel .progress {
+  margin-top: 0;
+}
+
+/* Mantener el juego centrado */
+
+#app {
+  margin-top: 0;
+}
+
+/* En pantallas más angostas,
+   volver a colocar los botones arriba
+   para evitar superposiciones */
+
+@media (max-width: 1250px) {
+  .topright {
+    top: 90px;
+    right: 12px;
+    width: 115px;
+  }
+
+  .shell {
+    max-width: calc(100% - 170px);
+    margin-left: 12px;
+    margin-right: auto;
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 700px) {
+  .topbar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .topright {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .shell {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8px 12px;
+  }
+}
+
+/* ==========================================
+   PERGAMINO LIMPIO — CORRECCIÓN DEFINITIVA
+   ========================================== */
+
+/* PISTAS: sin rectángulos grises detrás */
+
+.game-panel .clue,
+.game-panel .clue.locked {
+  position: relative;
+
+  background: transparent !important;
+  background-image: url("imagenes/pergamino.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+
+  box-shadow: none !important;
+
+  min-height: 65px;
+  padding: 10px 28px !important;
+  gap: 12px;
+
+  color: #332015;
+}
+
+/* Mantener la textura clara en todas las pistas */
+
+.game-panel .clue.locked {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Oscurecer solamente el contenido bloqueado */
+
+.game-panel .clue.locked .type,
+.game-panel .clue.locked .value {
+  opacity: .5;
+}
+
+/* Números de pista */
+
+.game-panel .clue .num {
+  background: #70431e !important;
+  color: #ffe2aa !important;
+  border: 1px solid #4c2b12 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
+}
+
+/* Texto de las pistas */
+
+.game-panel .clue .type {
+  color: #71451f !important;
+  font-size: 12px;
+}
+
+.game-panel .clue .value {
+  color: #2c1c12 !important;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* BUSCADOR: eliminar rectángulo y bordes */
+
+.answer-controls .searchbox input {
+  appearance: none;
+
+  background: transparent !important;
+  background-image: url("imagenes/pergamino.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+
+  box-shadow: none !important;
+
+  height: 55px;
+  padding: 10px 30px !important;
+
+  color: #302015 !important;
+  font-size: 16px;
+}
+
+.answer-controls .searchbox input::placeholder {
+  color: #75502d !important;
+  opacity: 1;
+}
+
+.answer-controls .searchbox input:focus {
+  filter: brightness(1.06);
+}
+
+/* BOTONES: fondo transparente, sin marcos */
+
+.answer-controls .button,
+.answer-controls .button.secondary,
+.answer-controls .button.danger {
+  appearance: none;
+
+  background: transparent !important;
+  background-image: url("imagenes/pergamino.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+
+  box-shadow: none !important;
+
+  color: #392416 !important;
+
+  min-height: 55px;
+  padding: 10px 15px !important;
+
+  font-size: 15px;
+  font-weight: normal;
+
+  text-shadow: none !important;
+
+  transition: filter .15s, transform .15s;
+}
+
+/* Botón de rendirse */
+
+.answer-controls .button.danger {
+  color: #922c20 !important;
+}
+
+/* Botón deshabilitado */
+
+.answer-controls .button:disabled {
+  opacity: .55 !important;
+  filter: grayscale(.5);
+}
+
+/* Efecto al pasar el mouse */
+
+.answer-controls .button:hover:not(:disabled) {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: none !important;
+}
+
+/* Lista de sugerencias */
+
+.answer-controls .suggestions {
+  background: #ead2a5 !important;
+  background-image: none !important;
+  border: 1px solid #80572e;
+  border-radius: 6px;
+}
+
+.answer-controls .suggestions button {
+  background: transparent;
+  color: #342115;
+}
+
+/* Espaciado de los elementos */
+
+.game-panel .clues {
+  gap: 7px;
+}
+
+.answer-controls {
+  gap: 8px;
+}
+
+/* CELULARES */
+
+@media (max-width: 540px) {
+  .game-panel .clue {
+    padding: 10px 18px !important;
+    min-height: 62px;
+  }
+
+  .game-panel .clue .value {
+    font-size: 14px;
+  }
+
+  .answer-controls .button {
+    font-size: 12px;
+    padding: 8px !important;
+  }
+}
+
+/* ==========================================
+   AJUSTES DE ALINEACIÓN, TÍTULO Y TIPOGRAFÍA
+   ========================================== */
+
+/* TODOS LOS TEXTOS EN MAYÚSCULAS */
+
+body,
+button,
+input,
+select,
+textarea,
+.suggestions,
+.clue,
+.scorebar,
+.stat,
+.fact {
+  text-transform: uppercase;
+}
+
+/* TÍTULO PRINCIPAL Y SUBTÍTULO */
+
+.game-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 4px;
+}
+
+.game-heading h2 {
+  margin: 4px 0 12px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #f2c779;
+  text-shadow:
+    2px 3px 0 #4b301b,
+    4px 5px 8px rgba(0, 0, 0, .6);
+}
+
+/* TEXTO | 5 PISTAS */
+
+.pistas-subtitle {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  color: #b9a17c;
+  white-space: nowrap;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, .4);
+}
+
+/* CENTRAR VERTICALMENTE LA FOTO
+   RESPECTO AL CONJUNTO DE LAS PISTAS */
+
+.game-grid {
+  align-items: stretch;
+}
+
+.game-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 0;
+}
+
+/* Mantener el tamaño actual del marco */
+
+.game-photo .portrait {
+  width: 100%;
+  height: 354px;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Conservar la imagen completa */
+
+.game-photo .portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* MANTENER LA DISTRIBUCIÓN EN CELULARES */
+
+@media (max-width: 760px) {
+  .game-heading h2 {
+    font-size: 45px;
+  }
+
+  .pistas-subtitle {
+    font-size: 17px;
+  }
+
+  .game-photo .portrait {
+    height: 300px;
+  }
+}
+
+@media (max-width: 540px) {
+  .game-heading {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .game-heading h2 {
+    font-size: 43px;
+    margin-bottom: 8px;
+  }
+
+  .pistas-subtitle {
+    font-size: 16px;
+  }
+
+  .game-photo .portrait {
+    width: 210px;
+    height: 230px;
+    min-height: 0;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   MARCO DE FOTO ESTILO PERGAMINO
+   ========================================== */
+
+/* Contenedor de la fotografía */
+
+.game-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Eliminar el marco viejo y sus capas */
+
+.game-photo .portrait,
+.game-photo .portrait.real {
+  position: relative;
+
+  width: 100%;
+  height: 354px;
+  min-height: 0;
+  max-height: none;
+
+  margin: 0;
+
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Pergamino detrás de la fotografía */
+
+.game-photo .portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url("imagenes/pergamino.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  pointer-events: none;
+}
+
+/* Eliminar el sombreado del marco anterior */
+
+.game-photo .portrait::after {
+  display: none !important;
+}
+
+/* Fotografía o silueta */
+
+.game-photo .portrait img,
+.game-photo .portrait.real img {
+  position: absolute;
+
+  inset: 6%;
+
+  width: 88%;
+  height: 88%;
+
+  object-fit: contain;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  z-index: 1;
+}
+
+/* Signo de interrogación */
+
+.game-photo .portrait .question {
+  z-index: 2;
+  color: #5d361c;
+}
+
+/* Ajuste para tablets */
+
+@media (max-width: 760px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    height: 300px;
+  }
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 540px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    width: 210px;
+    height: 230px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   FOTO: OCUPAR TODO EL MARCO
+   ========================================== */
+
+/* Marco completo, alineado con las pistas */
+
+.game-photo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+/* El pergamino ocupa todo el recuadro */
+
+.game-photo .portrait,
+.game-photo .portrait.real {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 354px !important;
+  min-height: 354px !important;
+  max-height: 354px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background-image: url("imagenes/pergamino.png") !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  overflow: hidden !important;
+}
+
+/* Quitar el pergamino duplicado */
+
+.game-photo .portrait::before,
+.game-photo .portrait::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* La imagen ocupa el área completa del marco */
+
+.game-photo .portrait img,
+.game-photo .portrait.real img {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain !important;
+
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  z-index: 1;
+}
+
+/* Eliminar el signo de pregunta duplicado
+   si la imagen ya lo contiene */
+
+.game-photo .portrait:has(img) .question {
+  display: none !important;
+}
+
+/* Tablets */
+
+@media (max-width: 760px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 540px) {
+  .game-photo .portrait,
+  .game-photo .portrait.real {
+    width: 210px !important;
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
+}

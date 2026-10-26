@@ -1,0 +1,762 @@
+{
+  "version": 1,
+  "cantidad_personajes": 23,
+  "pistas_por_personaje": 5,
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Lionel Messi",
+      "alias": [
+        "Messi",
+        "Leo Messi",
+        "Lionel Andrés Messi"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Futbolista profesional"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1987"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Ganó ocho Balones de Oro y numerosos títulos con el FC Barcelona."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Capitán de Argentina que levantó la Copa del Mundo de 2022 en Catar."
+        }
+      ],
+      "biografia": "Futbolista argentino que desarrolló gran parte de su carrera en el FC Barcelona. Ganó ocho Balones de Oro y lideró a Argentina en la conquista del Mundial de 2022.",
+      "imagen_archivo_sugerido": "Lionel Messi.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Hernán Cortés",
+      "alias": [
+        "Hernan Cortes",
+        "Cortés"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Conquistador, militar y gobernador colonial"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Corona de Castilla"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1485"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Encabezó, junto a numerosos aliados indígenas, la campaña que culminó con la caída de Tenochtitlan en 1521."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Conquistador español asociado a Moctezuma II y a la caída del Imperio mexica."
+        }
+      ],
+      "biografia": "Conquistador castellano que dirigió una expedición en Mesoamérica y, con la participación fundamental de aliados indígenas, tomó Tenochtitlan en 1521. La campaña abrió paso al dominio colonial español sobre el antiguo territorio mexica.",
+      "imagen_archivo_sugerido": "Hernan Cortes.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Cristóbal Colón",
+      "alias": [
+        "Cristobal Colon",
+        "Christopher Columbus",
+        "Colón"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Navegante, explorador y almirante"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República de Génova"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1451"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Realizó cuatro viajes transatlánticos al servicio de la Corona de Castilla."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Navegante que llegó al Caribe en 1492 en una expedición que incluía la Santa María, la Pinta y la Niña."
+        }
+      ],
+      "biografia": "Navegante genovés que llegó al Caribe en 1492 al servicio de los Reyes Católicos. Sus viajes iniciaron el contacto sostenido entre Europa y América y favorecieron la expansión colonial europea.",
+      "imagen_archivo_sugerido": "Cristobal Colon.png"
+    },
+    {
+      "id": 4,
+      "nombre": "José de San Martín",
+      "alias": [
+        "Jose de San Martin",
+        "San Martín",
+        "San Martin"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Militar, estratega y dirigente independentista"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Virreinato del Río de la Plata"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1778"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Organizó el Ejército de los Andes y encabezó campañas emancipadoras en Chile y Perú."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Libertador argentino célebre por el cruce de los Andes."
+        }
+      ],
+      "biografia": "Militar y dirigente independentista nacido en Yapeyú. Organizó el Ejército de los Andes y participó decisivamente en la independencia de Argentina, Chile y Perú.",
+      "imagen_archivo_sugerido": "Jose de San Martin.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Juan Domingo Perón",
+      "alias": [
+        "Juan Perón",
+        "Juan Peron",
+        "Perón",
+        "Peron"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Militar, político y presidente"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1895"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Fue presidente de Argentina en tres períodos e impulsó importantes reformas laborales y sociales."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Presidente argentino que dio nombre al peronismo y estuvo casado con Eva Duarte."
+        }
+      ],
+      "biografia": "Militar y político argentino que presidió el país en tres períodos. Fue el principal fundador del peronismo y promovió transformaciones laborales y sociales que marcaron la política nacional.",
+      "imagen_archivo_sugerido": "Juan Domingo Peron.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Mahatma Gandhi",
+      "alias": [
+        "Gandhi",
+        "Mohandas Gandhi",
+        "Mohandas Karamchand Gandhi"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Abogado, activista y dirigente político"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "India británica (presidencia de Bombay)"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1869"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Impulsó campañas de desobediencia civil y resistencia no violenta contra el dominio colonial británico."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Líder de la independencia india asociado a la no violencia y a la Marcha de la Sal."
+        }
+      ],
+      "biografia": "Abogado y dirigente indio que promovió la resistencia no violenta frente al dominio británico. Sus campañas de desobediencia civil influyeron en la independencia de India y en movimientos posteriores por los derechos civiles.",
+      "imagen_archivo_sugerido": "Mahatma Gandhi.png"
+    },
+    {
+      "id": 7,
+      "nombre": "William Wallace",
+      "alias": [
+        "Wallace",
+        "Sir William Wallace"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Caballero, militar y líder independentista"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino de Escocia"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1270"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Derrotó a un ejército inglés en la batalla del Puente de Stirling en 1297."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Héroe escocés de la lucha contra Inglaterra cuya historia inspiró la película Braveheart."
+        }
+      ],
+      "biografia": "Líder militar escocés que luchó contra el dominio inglés durante las guerras de independencia. Venció en el Puente de Stirling en 1297 y fue ejecutado en Londres en 1305.",
+      "imagen_archivo_sugerido": "William Wallace.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Gengis Kan",
+      "alias": [
+        "Genghis Khan",
+        "Gengis Khan",
+        "Chinggis Khan",
+        "Temuyín",
+        "Temujin"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Conquistador, jefe militar y emperador"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Estepas mongolas (antes de la unificación imperial)"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1162"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Unificó tribus mongolas y fundó el Imperio mongol en 1206."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Fundador del Imperio mongol, célebre por sus grandes conquistas a caballo en Asia."
+        }
+      ],
+      "biografia": "Gobernante y conquistador mongol que unificó numerosas tribus de las estepas y fundó el Imperio mongol en 1206. Sus campañas sentaron las bases de uno de los mayores imperios de la historia.",
+      "imagen_archivo_sugerido": "Genghis Khan.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Mansa Musa",
+      "alias": [
+        "Musa I de Malí",
+        "Mansa Musa I",
+        "Musa de Mali"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Emperador y gobernante"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Imperio de Malí"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1280"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Su peregrinación a La Meca en 1324 dio a conocer la riqueza de Malí; impulsó centros comerciales y culturales."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Emperador de Malí famoso por su inmensa riqueza en oro y su célebre peregrinación a La Meca."
+        }
+      ],
+      "biografia": "Emperador del Imperio de Malí en el siglo XIV, recordado por la riqueza asociada al comercio del oro. Su peregrinación a La Meca difundió la fama del imperio y su reinado coincidió con el desarrollo de Tombuctú.",
+      "imagen_archivo_sugerido": "Mansa Musa.png"
+    },
+    {
+      "id": 10,
+      "nombre": "Ricardo Darín",
+      "alias": [
+        "Ricardo Darin",
+        "Darín",
+        "Darin"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Actor de cine, teatro y televisión"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1957"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Protagonizó Nueve reinas, El secreto de sus ojos y Argentina, 1985."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Actor argentino protagonista de Nueve reinas y El secreto de sus ojos."
+        }
+      ],
+      "biografia": "Actor argentino con una extensa carrera en cine, teatro y televisión. Protagonizó películas como Nueve reinas, El secreto de sus ojos y Argentina, 1985, y contribuyó a la proyección internacional del cine argentino.",
+      "imagen_archivo_sugerido": "Ricardo Darin.png"
+    },
+    {
+      "id": 11,
+      "nombre": "Eminem",
+      "alias": [
+        "Marshall Mathers",
+        "Marshall Bruce Mathers III",
+        "Slim Shady"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Rapero, compositor y productor musical"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Estados Unidos de América"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1972"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Publicó álbumes de gran éxito y ganó un Óscar por la canción Lose Yourself."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Rapero estadounidense conocido como Slim Shady, autor de Lose Yourself."
+        }
+      ],
+      "biografia": "Rapero estadounidense cuyo nombre real es Marshall Bruce Mathers III. Alcanzó fama internacional por sus álbumes, sus rimas y letras autobiográficas; ganó un Óscar por Lose Yourself.",
+      "imagen_archivo_sugerido": "Eminem.png"
+    },
+    {
+      "id": 12,
+      "nombre": "Cristina Fernández de Kirchner",
+      "alias": [
+        "Cristina Kirchner",
+        "Cristina Fernández",
+        "CFK",
+        "Cristina Fernandez de Kirchner"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Abogada, política, presidenta y vicepresidenta"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1953"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Fue presidenta argentina de 2007 a 2015 y vicepresidenta de 2019 a 2023."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Dirigente argentina conocida como CFK, esposa de Néstor Kirchner y presidenta durante dos mandatos."
+        }
+      ],
+      "biografia": "Abogada y política argentina que presidió el país entre 2007 y 2015 y fue vicepresidenta entre 2019 y 2023. Su trayectoria está vinculada al kirchnerismo y a debates centrales de la política argentina contemporánea.",
+      "imagen_archivo_sugerido": "CFK.png"
+    },
+    {
+      "id": 13,
+      "nombre": "J. Robert Oppenheimer",
+      "alias": [
+        "Robert Oppenheimer",
+        "Oppenheimer",
+        "Julius Robert Oppenheimer"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Físico teórico y director científico"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Estados Unidos de América"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1904"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Dirigió el laboratorio de Los Álamos durante el Proyecto Manhattan."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Físico conocido como el padre de la bomba atómica por su papel en el Proyecto Manhattan."
+        }
+      ],
+      "biografia": "Físico teórico estadounidense que dirigió el laboratorio de Los Álamos durante el Proyecto Manhattan. Participó en el desarrollo de las primeras armas nucleares y luego intervino en debates sobre su control y consecuencias.",
+      "imagen_archivo_sugerido": "Oppenheimer.png"
+    },
+    {
+      "id": 14,
+      "nombre": "Cleopatra VII",
+      "alias": [
+        "Cleopatra",
+        "Cleopatra VII Filopátor",
+        "Cleopatra VII Philopator"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Reina, gobernante y diplomática"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino ptolemaico de Egipto"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "69 a. C."
+        },
+        {
+          "tipo": "logros",
+          "texto": "Defendió la posición política de Egipto mediante alianzas con Julio César y Marco Antonio."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Última reina ptolemaica de Egipto, famosa por sus relaciones políticas con Julio César y Marco Antonio."
+        }
+      ],
+      "biografia": "Cleopatra VII fue la última gobernante efectiva de la dinastía ptolemaica de Egipto. Mantuvo alianzas con Julio César y Marco Antonio; tras su muerte en 30 a. C., Egipto quedó bajo control romano.",
+      "imagen_archivo_sugerido": "Cleopatra.png"
+    },
+    {
+      "id": 15,
+      "nombre": "Alejandro Magno",
+      "alias": [
+        "Alejandro III de Macedonia",
+        "Alexander the Great",
+        "Alejandro el Grande"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Rey, conquistador y comandante militar"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino de Macedonia"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "356 a. C."
+        },
+        {
+          "tipo": "logros",
+          "texto": "Derrotó al Imperio persa y extendió sus conquistas desde Grecia hasta regiones próximas a la India."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Rey macedonio conocido como Alejandro Magno, conquistador del Imperio persa."
+        }
+      ],
+      "biografia": "Rey de Macedonia que derrotó al Imperio persa y creó un vasto dominio desde el Mediterráneo oriental hasta Asia. Sus conquistas favorecieron la difusión de la cultura helenística.",
+      "imagen_archivo_sugerido": "Alejandro Magno.png"
+    },
+    {
+      "id": 16,
+      "nombre": "Charles Chaplin",
+      "alias": [
+        "Charlie Chaplin",
+        "Chaplin",
+        "Charlot"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Actor, director, guionista y compositor"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino Unido de Gran Bretaña e Irlanda"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1889"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Creó y protagonizó películas como Tiempos modernos, Luces de la ciudad y El gran dictador."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Ícono del cine mudo conocido por su personaje del vagabundo con bombín y bastón."
+        }
+      ],
+      "biografia": "Actor y cineasta británico fundamental para la historia del cine. Su personaje del vagabundo, conocido como Charlot, protagonizó películas que combinaron humor y crítica social.",
+      "imagen_archivo_sugerido": "Chaplin.png"
+    },
+    {
+      "id": 17,
+      "nombre": "Chano Moreno Charpentier",
+      "alias": [
+        "Chano",
+        "Santiago Moreno Charpentier",
+        "Chano Charpentier"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Cantante, compositor y músico"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1981"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Lideró Tan Biónica y popularizó canciones como Ciudad mágica y La melodía de Dios."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Cantante argentino conocido como Chano, voz principal de Tan Biónica."
+        }
+      ],
+      "biografia": "Cantante y compositor argentino conocido por ser el vocalista de Tan Biónica. Alcanzó popularidad con canciones como Ciudad mágica y La melodía de Dios, y también desarrolló una carrera solista.",
+      "imagen_archivo_sugerido": "Chano.png"
+    },
+    {
+      "id": 18,
+      "nombre": "Francisco Pizarro",
+      "alias": [
+        "Pizarro",
+        "Francisco Pizarro González"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Conquistador, militar y gobernador colonial"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Corona de Castilla"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1478"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Dirigió la expedición que capturó a Atahualpa en 1532 y fundó Lima en 1535."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Conquistador español asociado a la caída del Imperio inca y a la captura de Atahualpa."
+        }
+      ],
+      "biografia": "Conquistador castellano que encabezó campañas que llevaron al sometimiento de gran parte del Imperio inca, aprovechando conflictos internos y con apoyo de aliados indígenas. Capturó a Atahualpa en 1532 y fundó Lima en 1535.",
+      "imagen_archivo_sugerido": "Francisco Pizarro.png"
+    },
+    {
+      "id": 19,
+      "nombre": "Charlie Kirk",
+      "alias": [
+        "Charles James Kirk"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Activista político, comentarista y fundador de una organización"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Estados Unidos de América"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1993"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Cofundó Turning Point USA y organizó debates y eventos políticos en universidades estadounidenses."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Activista conservador estadounidense asociado a Turning Point USA, asesinado en un evento universitario en Utah en 2025."
+        }
+      ],
+      "biografia": "Activista y comentarista político conservador estadounidense, cofundador de Turning Point USA. Participó en debates y actividades dirigidas a estudiantes y jóvenes; fue asesinado durante un evento universitario en Utah en 2025.",
+      "imagen_archivo_sugerido": "Charlie Kirk.png"
+    },
+    {
+      "id": 20,
+      "nombre": "Vasco da Gama",
+      "alias": [
+        "Vasco de Gama",
+        "Vasco da Gama"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Navegante, explorador y comandante naval"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino de Portugal"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "c. 1460"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Dirigió una expedición que llegó a la India por mar rodeando el extremo sur de África en 1498."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Explorador portugués famoso por abrir una ruta marítima europea hacia la India alrededor de África."
+        }
+      ],
+      "biografia": "Navegante portugués que dirigió la primera expedición europea conocida que alcanzó la India por mar rodeando África. Su viaje de 1497 a 1499 contribuyó a la expansión comercial y colonial portuguesa en el Índico.",
+      "imagen_archivo_sugerido": "Vasco da gama.png"
+    },
+    {
+      "id": 21,
+      "nombre": "James Cook",
+      "alias": [
+        "Captain Cook",
+        "Capitán Cook",
+        "James Cook"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Navegante, explorador y cartógrafo"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "Reino de Gran Bretaña"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1728"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Dirigió tres expediciones por el Pacífico y cartografió costas de Nueva Zelanda y Australia oriental."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Capitán británico célebre por sus viajes por el Pacífico y por cartografiar la costa oriental de Australia."
+        }
+      ],
+      "biografia": "Navegante y cartógrafo británico que dirigió tres expediciones por el océano Pacífico. Cartografió costas de Nueva Zelanda y el este de Australia; sus viajes estuvieron vinculados a la expansión colonial británica.",
+      "imagen_archivo_sugerido": "James Cook.png"
+    },
+    {
+      "id": 22,
+      "nombre": "Flavio Azzaro",
+      "alias": [
+        "Azzaro",
+        "Flavio Azzaro"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Periodista deportivo, conductor y comunicador"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1985"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Condujo programas y espacios digitales dedicados al debate sobre el fútbol argentino."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Periodista deportivo argentino conocido por sus debates futboleros y transmisiones en plataformas digitales."
+        }
+      ],
+      "biografia": "Periodista y comunicador argentino especializado en fútbol. Trabajó en medios tradicionales y plataformas digitales, donde se hizo conocido por sus debates y opiniones sobre el fútbol argentino.",
+      "imagen_archivo_sugerido": "Flavio Azzaro.png"
+    },
+    {
+      "id": 23,
+      "nombre": "Maxi Trusso",
+      "alias": [
+        "Maximiliano Trusso",
+        "Maxi Trusso"
+      ],
+      "pistas": [
+        {
+          "tipo": "ocupacion",
+          "texto": "Cantante, compositor y músico"
+        },
+        {
+          "tipo": "pais_historico",
+          "texto": "República Argentina"
+        },
+        {
+          "tipo": "anio_nacimiento",
+          "texto": "1970"
+        },
+        {
+          "tipo": "logros",
+          "texto": "Publicó canciones como Please Me y Nothing at All, vinculadas al pop electrónico."
+        },
+        {
+          "tipo": "como_se_lo_recuerda",
+          "texto": "Músico argentino de pop electrónico conocido por el éxito Please Me."
+        }
+      ],
+      "biografia": "Cantante y compositor argentino asociado al pop y la música electrónica. Alcanzó popularidad con temas como Please Me y Nothing at All, combinando influencias del synth-pop y el rock.",
+      "imagen_archivo_sugerido": "Maxi Trusso.png"
+    }
+  ]
+}
